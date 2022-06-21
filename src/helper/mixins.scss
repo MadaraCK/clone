@@ -1,0 +1,18 @@
+@mixin circle{
+  width: 40px;
+  height: 40px;
+  background: lightgray;
+  border-radius: 50%;
+  position: relative;
+}
+@mixin sizeIconBgc{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+@mixin sizeIcon{
+  width: 30px;
+  height: 30px;
+}

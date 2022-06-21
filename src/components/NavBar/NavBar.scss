@@ -1,0 +1,84 @@
+@import "src/helper/reset";
+@import "src/helper/mixins";
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  .navigation {
+    width: 100vw;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 10px;
+
+    .fb_box {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+
+      .main_text {
+        font-size: 34px;
+        color: blue;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+
+      .icon_box {
+        display: flex;
+        gap: 15px;
+
+        .search_box {
+          @include circle;
+
+          .search {
+            content: url("../../../src/images/magnifying-glass-solid.svg");
+            @include sizeIconBgc;
+          }
+        }
+
+        .messenger_box {
+          @include circle;
+
+          .messenger {
+            content: url("../../../src/images/facebook-messenger-brands.svg");
+            @include sizeIconBgc;
+          }
+        }
+      }
+    }
+
+    .menu_box {
+      display: flex;
+      justify-content: space-around;
+
+      .home {
+        content: url("../../../src/images/house-solid.svg");
+        @include sizeIcon;
+        &:current{
+          border: 1px solid black;
+        }
+      }
+
+      .shop {
+        content: url("../../../src/images/shop-solid.svg");
+        @include sizeIcon
+      }
+
+      .user {
+        content: url("../../../src/images/circle-user-solid.svg");
+        @include sizeIcon
+      }
+
+      .watch {
+        content: url("../../../src/images/tv-solid.svg");
+        @include sizeIcon
+      }
+
+      .bell {
+        content: url("../../../src/images/bell-solid.svg");
+        @include sizeIcon
+      }
+
+      .burger {
+        content: url("../../../src/images/bars-solid.svg");
+        @include sizeIcon
+      }
+    }
+  }
+}
