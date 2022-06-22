@@ -1,0 +1,34 @@
+@import "src/helper/reset";
+@import "src/helper/mixins";
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  .box_relation {
+    .relation_text_box {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+
+      .relation_text {
+        @include relation
+      }
+
+      .reels_text {
+        @include relation
+      }
+    }
+
+    .box_photo_relation {
+      display: flex;
+      gap: 5px;
+      overflow-y: auto;
+
+      .fake_relation {
+        min-width: 100px;
+        border-radius: 15px;
+        margin-left: 10px;
+        height: 200px;
+        background-color: gray;
+      }
+    }
+  }
+}

@@ -4,17 +4,19 @@ import {
     Route,
     Routes,
 } from 'react-router-dom';
-import NavBar from "./components/NavBar/NavBar";
 import Menu from "./components/NavBar/Menu/Menu";
+import Core from "./components/Core";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route element={<NavBar/>} path="/"/>
-                <Route element={<Menu/>} path="/Menu"/>
-            </Routes>
-        </BrowserRouter>
+        <div className="app_box">
+            <BrowserRouter>
+                <Routes>
+                    <Route element={<Core/>} path="/"/>
+                    <Route element={<Menu/>} path="/Menu"/>
+                </Routes>
+            </BrowserRouter>
+        </div>
     );
 }
 
